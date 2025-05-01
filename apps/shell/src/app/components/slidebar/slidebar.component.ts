@@ -30,7 +30,7 @@ export class SlidebarComponent {
  
   public onSlidebarItemClick(navigate: string) {
     console.log(`Slidebar item clicked`);
-    this.router.navigate(['/' + navigate]);
+    this.router.navigate(['/app/' + navigate]);
   }
 
   public onSettingsClick() {

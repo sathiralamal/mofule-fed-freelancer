@@ -60,7 +60,7 @@ export class AppComponent implements OnInit {
       (isAuthenticated) => {
         console.log('Is Authenticated:', isAuthenticated);
         if (isAuthenticated) {
-          this.router.navigate(['/home']);
+          this.router.navigate(['/app']);
         } else {
           this.router.navigate(['/login']);
         }
