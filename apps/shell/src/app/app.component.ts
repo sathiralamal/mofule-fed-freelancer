@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component, inject, OnInit } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 import { HeaderbarComponent } from './components/headerbar/headerbar.component';
 import { SlidebarComponent } from './components/slidebar/slidebar.component';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -14,6 +14,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { LoginComponent } from './views/login/login.component';
+import { AuthService } from '@auth0/auth0-angular';
+import { CommonModule } from '@angular/common';
+import { HomeComponent } from './views/home/home.component';
 
 export interface Tile {
   color: string;
@@ -24,32 +28,52 @@ export interface Tile {
 @Component({
   imports: [
     RouterModule,
-    HeaderbarComponent,
-    MatGridListModule,
-    MatSidenavModule,
-    MatButtonModule,
-    MatListModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatButtonModule,
-    MatDividerModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    SlidebarComponent,
+    // MatGridListModule,
+    // MatSidenavModule,
+    // MatButtonModule,
+    // MatListModule,
+    // MatSidenavModule,
+    // MatIconModule,
+    // MatButtonModule,
+    // MatDividerModule,
+    // MatFormFieldModule,
+    // MatInputModule,
+    // MatSelectModule,
+    // MatDatepickerModule,
+    // MatNativeDateModule,
+    CommonModule,
   ],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'shell';
+  isAuthenticated = false;
+  authService = inject(AuthService);
+  private router = inject(Router);
 
-  tiles: Tile[] = [
-    { text: 'One', cols: 3, rows: 20, color: 'lightblue' },
-    { text: 'Three', cols: 37, rows: 1, color: 'lightpink' },
-    { text: 'Four', cols: 37, rows: 19, color: '#DDBDF1' },
-  ];
+  ngOnInit() {
+    console.log('AppComponent initialized');
+
+    this.authService.isAuthenticated$.subscribe(
+      (isAuthenticated) => {
+        console.log('Is Authenticated:', isAuthenticated);
+        if (isAuthenticated) {
+          this.router.navigate(['/home']);
+        } else {
+          this.router.navigate(['/login']);
+        }
+      },
+      (error) => {
+        console.error('Error checking authentication:', error);
+        // Handle error if needed
+      }
+    );
+    // if (true) {
+    //   this.router.navigate(['/home']);
+    // } else {
+    //   this.router.navigate(['/login']);
+    // }
+  }
 }

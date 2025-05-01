@@ -1,14 +1,17 @@
-<div class="user-profile">
+<div *ngIf="profileLoaded" class="user-profile">
   <div class="avatar">
-    <div class="avatar-circle">RD</div>
+    <div class="avatar-circle">
+      <img class="avatar-circle" src="{{ userPicture }}" />
+    </div>
   </div>
   <div class="user-info">
-    <div class="user-name">Rudolph Doum Akono</div>
-    <div class="user-email">doumakonofl.com</div>
+    <div class="user-name">{{ userName }}</div>
+    <div class="user-email">{{ userEmail }}</div>
   </div>
   <button
     mat-icon-button
     aria-label="Example icon button with a vertical three dot icon"
+    (click)="logout()"
   >
     <mat-icon>more_vert</mat-icon>
   </button>

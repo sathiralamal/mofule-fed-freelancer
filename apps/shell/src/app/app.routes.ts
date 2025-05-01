@@ -1,7 +1,15 @@
 import { Route } from '@angular/router';
+// import { DashbordComponent } from './views/dashbord/dashbord.component';
+import { AppComponent } from './app.component';
 import { DashbordComponent } from './views/dashbord/dashbord.component';
+import { HomeComponent } from './views/home/home.component';
+import { LoginComponent } from './views/login/login.component';
 
 export const appRoutes: Route[] = [
+  {
+    path: 'home',
+    component: HomeComponent,
+  },
   {
     path: 'mfe2',
     loadChildren: () => import('mfe2/Routes').then((m) => m!.remoteRoutes),
@@ -11,7 +19,11 @@ export const appRoutes: Route[] = [
     loadChildren: () => import('mfe1/Routes').then((m) => m!.remoteRoutes),
   },
   {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
     path: '',
-    component: DashbordComponent,
+    component: AppComponent,
   },
 ];
