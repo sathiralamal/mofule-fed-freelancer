@@ -1,7 +1,76 @@
-<p>slidebar works!</p>
-<ul class="remote-menu">
-  <li><a routerLink="/">Homed</a></li>
-  <li><a routerLink="mfe1">Mfe1</a></li>
-  <li><a routerLink="mfe2">Mfe2</a></li>
-</ul>
-<button (click)="onSlidebarItemClick()">mfeq</button>
+<div class="logo-container">
+  <div class="logo">
+    <span>eo</span>
+  </div>
+  <div class="logo-text">
+    <div class="app-name">ElevenJobs</div>
+    <div class="app-type">Testing</div>
+  </div>
+  <button mat-icon-button>
+    <mat-icon>open_in_new</mat-icon>
+  </button>
+</div>
+
+<!--Remote application calling buuton-->
+<div class="sidenav-content">
+  <mat-action-list>
+    <button mat-list-item (click)="onSlidebarItemClick('mfe1')">
+      Applciation 1
+    </button>
+    <button mat-list-item (click)="onSlidebarItemClick('mfe2')">
+      Applciation 2
+    </button>
+  </mat-action-list>
+
+  <div class="sidenav-section">
+    <div class="section-title">Other</div>
+    <a class="sidenav-item active">
+      <mat-icon>settings</mat-icon>
+      <span>Settings</span>
+      <button
+        (click)="onSettingsClick()"
+        mat-icon-button
+        aria-label="Example icon button with a vertical three dot icon"
+      >
+        <mat-icon class="expand-icon">{{
+          showSettings ? 'expand_less' : 'expand_more'
+        }}</mat-icon>
+      </button>
+    </a>
+
+    <div *ngIf="showSettings" class="nested-menu">
+      <a class="nested-item">
+        <mat-icon>person</mat-icon>
+        <span>Profile</span>
+      </a>
+      <a class="nested-item active">
+        <mat-icon>account_circle</mat-icon>
+        <span>Account</span>
+      </a>
+      <a class="nested-item">
+        <mat-icon>business</mat-icon>
+        <span>Organization</span>
+      </a>
+      <a class="nested-item">
+        <mat-icon>palette</mat-icon>
+        <span>Appearance</span>
+      </a>
+      <a class="nested-item">
+        <mat-icon>notifications</mat-icon>
+        <span>Notifications</span>
+      </a>
+      <a class="nested-item">
+        <mat-icon>desktop_windows</mat-icon>
+        <span>Display</span>
+      </a>
+    </div>
+    <a class="sidenav-item">
+      <mat-icon>help</mat-icon>
+      <span>Help Center</span>
+    </a>
+  </div>
+</div>
+<!--user profile-->
+<div [style]="{ position: 'fixed', bottom: '0' }">
+  <app-userprofile></app-userprofile>
+</div>

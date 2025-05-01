@@ -1,5 +1,13 @@
-<!-- <app-headerbar></app-headerbar> -->
-
-<app-headerbar></app-headerbar>
-<router-outlet></router-outlet>
-<app-slidebar></app-slidebar>
+<div class="container">
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav mode="side" opened class="sidenav">
+      <app-slidebar></app-slidebar>
+    </mat-sidenav>
+    <mat-sidenav-content class="main-content">
+      <app-headerbar></app-headerbar>
+      <div class="page-content">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

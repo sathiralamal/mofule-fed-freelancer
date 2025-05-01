@@ -8,6 +8,7 @@
     "@angular-devkit/build-angular": "~19.2.0",
     "@angular-devkit/core": "~19.2.0",
     "@angular-devkit/schematics": "~19.2.0",
+    "@angular/cdk": "^19.2.13",
     "@angular/cli": "~19.2.0",
     "@angular/compiler-cli": "~19.2.0",
     "@angular/language-service": "~19.2.0",
@@ -48,10 +49,12 @@
     "typescript-eslint": "^8.19.0"
   },
   "dependencies": {
+    "@angular/cdk": "~{STABLE_PROJECT_VERSION}",
     "@angular/common": "~19.2.0",
     "@angular/compiler": "~19.2.0",
     "@angular/core": "~19.2.0",
     "@angular/forms": "~19.2.0",
+    "@angular/material": "~{STABLE_PROJECT_VERSION}",
     "@angular/platform-browser": "~19.2.0",
     "@angular/platform-browser-dynamic": "~19.2.0",
     "@angular/router": "~19.2.0",
