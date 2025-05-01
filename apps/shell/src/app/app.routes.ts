@@ -12,22 +12,7 @@ export const appRoutes: Route[] = [
     path: 'home',
     component: HomeComponent,
   },
-  // {
-  //   path: 'mfe2',
-  //   loadChildren: () => import('mfe2/Routes').then((m) => m!.remoteRoutes),
-  // },
-  // {
-  //   path: 'mfe1',
-  //   loadChildren: () => import('mfe1/Routes').then((m) => m!.remoteRoutes),
-  // },
-  // {
-  //   path: 'login',
-  //   component: LoginComponent,
-  // },
-  // {
-  //   path: '',
-  //   component: AppComponent,
-  // },
+
   {
     path: '',
     component: AppComponent,
@@ -41,7 +26,7 @@ export const appRoutes: Route[] = [
     component: HomeComponent,
     canActivate: [AuthGuard],
     children: [
-      { path: 'home', component: HomeComponent },
+      { path: '', component: DashbordComponent },
       {
         path: 'mfe2',
         loadChildren: () => import('mfe2/Routes').then((m) => m!.remoteRoutes),
