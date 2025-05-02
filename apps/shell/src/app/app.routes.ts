@@ -5,7 +5,6 @@ import { DashbordComponent } from './views/dashbord/dashbord.component';
 import { HomeComponent } from './views/home/home.component';
 import { LoginComponent } from './views/login/login.component';
 import { AuthGuard } from '@auth0/auth0-angular';
-import { MainlayoutComponent } from './mainlayout/mainlayout.component';
 
 export const appRoutes: Route[] = [
   {

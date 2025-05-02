@@ -1,10 +1,19 @@
+<!-- Main container for the layout wrapping all page elements -->
 <div class="container">
+  <!-- Angular Material sidenav container: holds the navigation panel and main content area -->
   <mat-sidenav-container class="sidenav-container">
+    <!-- Side navigation panel: displays the sidebar component -->
     <mat-sidenav mode="side" opened class="sidenav">
+      <!-- Sidebar component: contains navigation links or menu items -->
       <app-slidebar></app-slidebar>
     </mat-sidenav>
+
+    <!-- Main content area: displays header and routed content -->
     <mat-sidenav-content class="main-content">
+      <!-- Header bar component: displays site header or top navigation -->
       <app-headerbar></app-headerbar>
+
+      <!-- Main page content area: renders components based on the current route -->
       <div class="page-content">
         <router-outlet></router-outlet>
       </div>
