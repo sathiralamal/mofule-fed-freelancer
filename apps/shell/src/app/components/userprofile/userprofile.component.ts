@@ -3,10 +3,16 @@ import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { AuthService } from '@auth0/auth0-angular';
-
+import { MatMenuModule } from '@angular/material/menu';
 @Component({
   selector: 'app-userprofile',
-  imports: [CommonModule, MatIconModule, MatButtonModule],
+  imports: [
+    CommonModule,
+    MatButtonModule,
+    MatButtonModule,
+    MatIconModule,
+    MatMenuModule,
+  ],
   templateUrl: './userprofile.component.html',
   styleUrl: './userprofile.component.css',
 })

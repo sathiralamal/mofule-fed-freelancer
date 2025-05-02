@@ -1,3 +1,13 @@
+<!--
+  User Profile Component
+  ----------------------
+  Displays the user's profile information including avatar, name, and email.
+  Provides a menu button (three dots) for user actions such as logging out.
+  - Shows content only when 'profileLoaded' is true.
+  - Avatar image is loaded from 'userPicture'.
+  - User's name and email are displayed.
+  - Menu button triggers a dropdown with actions (currently only 'Log out').
+-->
 <div *ngIf="profileLoaded" class="user-profile">
   <div class="avatar">
     <div class="avatar-circle">
@@ -10,9 +20,18 @@
   </div>
   <button
     mat-icon-button
+    [matMenuTriggerFor]="menu"
+    aria-label="Example icon-button with a menu"
+    mat-icon-button
     aria-label="Example icon button with a vertical three dot icon"
-    (click)="logout()"
   >
-    <mat-icon>more_vert</mat-icon>
+    <mat-icon>unfold_more</mat-icon>
   </button>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>logout</mat-icon>
+      <span>Log out</span>
+    </button>
+  </mat-menu>
 </div>
