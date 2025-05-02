@@ -1,274 +1,37 @@
-/* app.component.scss */
+app.component.scss .container {
+  display: flex;
+  height: 100vh;
+  background-color: #f8f9fa;
+}
+
 .container {
-    display: flex;
-    height: 100vh;
-    background-color: #f8f9fa;
-  }
-  
-  .sidenav-container {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .sidenav {
-    width: 250px;
-    background-color: #fff;
-    border-right: 1px solid #e0e0e0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .logo-container {
-    display: flex;
-    align-items: center;
-    padding: 16px;
-    border-bottom: 1px solid #f1f1f1;
-  }
-  
-  .logo {
-    background-color: #000;
-    color: #fff;
-    width: 32px;
-    height: 32px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    margin-right: 10px;
-  }
-  
-  .logo-text {
-    flex: 1;
-  }
-  
-  .app-name {
-    font-weight: 500;
-    font-size: 14px;
-  }
-  
-  .app-type {
-    font-size: 12px;
-    color: #888;
-  }
-  
-  .sidenav-content {
-    flex: 1;
-    overflow-y: auto;
-    padding: 8px 0;
-  }
-  
-  .sidenav-section {
-    margin-bottom: 16px;
-  }
-  
-  .section-title {
-    padding: 8px 16px;
-    font-size: 12px;
-    color: #888;
-    text-transform: uppercase;
-  }
-  
-  .sidenav-item {
-    display: flex;
-    align-items: center;
-    padding: 10px 16px;
-    color: #555;
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 14px;
-    border-radius: 4px;
-    margin: 2px 8px;
-  
-    mat-icon {
-      margin-right: 12px;
-      font-size: 20px;
-      width: 20px;
-      height: 20px;
-    }
-  
-    .expand-icon {
-      margin-left: auto;
-      margin-right: 0;
-    }
-  
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.04);
-    }
-  
-    &.active {
-      background-color: #f1f8ff;
-      color: #0066cc;
-  
-      mat-icon {
-        color: #0066cc;
-      }
-    }
-  }
-  
-  .nested-menu {
-    margin-left: 16px;
-    margin-bottom: 8px;
-  }
-  
-  .nested-item {
-    display: flex;
-    align-items: center;
-    padding: 8px 16px;
-    color: #555;
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 14px;
-    border-radius: 4px;
-    margin: 2px 8px;
-  
-    mat-icon {
-      margin-right: 12px;
-      font-size: 18px;
-      width: 18px;
-      height: 18px;
-    }
-  
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.04);
-    }
-  
-    &.active {
-      background-color: #edf5ff;
-      color: #0066cc;
-  
-      mat-icon {
-        color: #0066cc;
-      }
-    }
-  }
-  
-  .user-profile {
-    display: flex;
-    align-items: center;
-    padding: 16px;
-    border-top: 1px solid #f1f1f1;
-  }
-  
-  .main-content {
-    padding: 24px;
-    height: 100vh;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .page-title {
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 8px;
-  }
-  
-  .page-description {
-    color: #666;
-    margin-bottom: 24px;
-  }
-  
-  .settings-container {
-    display: flex;
-    margin-top: 24px;
-  }
-  
-  .settings-sidebar {
-    width: 200px;
-    margin-right: 24px;
-  }
-  
-  .sidebar-item {
-    display: flex;
-    align-items: center;
-    padding: 10px 16px;
-    color: #555;
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 14px;
-    border-radius: 4px;
-    margin-bottom: 4px;
-  
-    mat-icon {
-      margin-right: 12px;
-      font-size: 20px;
-      width: 20px;
-      height: 20px;
-    }
-  
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.04);
-    }
-  
-    &.selected {
-      background-color: #edf5ff;
-      color: #0066cc;
-  
-      mat-icon {
-        color: #0066cc;
-      }
-    }
-  }
-  
-  .settings-content {
-    flex: 1;
-    background-color: white;
-    border-radius: 8px;
-    padding: 24px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  }
-  
-  .settings-header {
-    margin-bottom: 24px;
-  
-    h2 {
-      font-size: 18px;
-      font-weight: 500;
-      margin-bottom: 4px;
-    }
-  
-    p {
-      color: #666;
-      font-size: 14px;
-    }
-  }
-  
-  .settings-form {
-    .form-group {
-      margin-bottom: 24px;
-    }
-  
-    label {
-      display: block;
-      font-weight: 500;
-      margin-bottom: 8px;
-      font-size: 14px;
-    }
-  
-    .form-hint {
-      font-size: 12px;
-      color: #666;
-      margin-top: 4px;
-    }
-  
-    .full-width {
-      width: 100%;
-    }
-  }
-  
-  .update-button {
-    min-width: 120px;
-    margin-top: 8px;
-  }
-  
-  mat-form-field {
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  mat-divider {
-    margin-bottom: 24px;
-  }
-  
+  display: flex;
+  height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.sidenav-container {
+  width: 100%;
+  height: 100%;
+}
+
+.sidenav {
+  width: 250px;
+  background-color: #fff;
+  border-right: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 4px 2px 8px 8px; /* Add margin for floating effect */
+  border-radius: 16px; /* Rounded corners for floating look */
+  box-shadow: 2px 4px 8px 2px rgba(0.15, 0.15, 0.15, 0.15); /* Black glow shadow */
+  z-index: 2;
+}
+
+.main-content {
+  padding: 24px;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
