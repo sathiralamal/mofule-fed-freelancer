@@ -15,6 +15,7 @@ const config: ModuleFederationConfig = {
    *
    */
   remotes: ['mfe1', 'mfe2'],
+
 };
 
 /**

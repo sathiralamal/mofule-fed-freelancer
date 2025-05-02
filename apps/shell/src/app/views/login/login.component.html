@@ -1,4 +1,4 @@
-<div class="login-container mat-elevation-z4">
+<!-- <div class="login-container mat-elevation-z4">
   <mat-card>
     <mat-card-header>
       <mat-card-title>Sign In</mat-card-title>
@@ -49,6 +49,50 @@
         <mat-icon>login</mat-icon>
         Sign in with Microsoft
       </button>
+    </mat-card-content>
+  </mat-card>
+</div> -->
+
+<!-- login.component.html -->
+<!-- login.component.html -->
+<div class="login-container">
+  <mat-card class="login-card">
+    <mat-card-header>
+      <mat-card-title>Sign In</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form (ngSubmit)="onLogin()">
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" formControlName="email" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" formControlName="password" required />
+        </mat-form-field>
+
+        <button
+          mat-flat-button
+          color="primary"
+          class="form-button"
+          type="submit"
+          [disabled]="!loginForm.valid"
+        >
+          Login
+        </button>
+
+        <div class="divider">or</div>
+
+        <button
+          mat-stroked-button
+          class="form-button"
+          type="button"
+          (click)="onFederationLogin()"
+        >
+          Sign in with Federation
+        </button>
+      </form>
     </mat-card-content>
   </mat-card>
 </div>

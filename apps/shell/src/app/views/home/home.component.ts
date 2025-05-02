@@ -37,7 +37,6 @@ import { AuthService } from '@auth0/auth0-angular';
     MatDatepickerModule,
     MatNativeDateModule,
     SlidebarComponent,
-    LoginComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
