@@ -29,7 +29,10 @@ app.component.scss .container {
 }
 
 .main-content {
-  padding: 24px;
+  padding-top: 2px;
+  padding-left: 28px;
+  padding-right: 12px;
+  padding-bottom: 8px;
   height: 100vh;
   box-sizing: border-box;
   display: flex;
