@@ -1,20 +1,129 @@
-.search-bar {
+.header-toolbar {
   display: flex;
   align-items: center;
-  max-width: 400px;
-  margin-bottom: 32px;
+  justify-content: space-between;
+  height: '10%';
+  padding: 4px;
+  border-bottom: 1px solid #e0e0e0;
+  border-radius: 10px;
 }
 
-.search-input {
-  width: 100%;
-}
-
-.keyboard-shortcut {
+/* LEFT */
+.left-section {
+  display: flex;
   align-items: center;
-  padding: 8px 6px;
-  background-color: #f2f2f2;
-  border-radius: 4px;
+}
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-width: 2px;
+  padding: 8px;
+  font-size: 24px;
+}
+
+.icon-btn-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 1px solid #e1e1e1;
+  margin-right: 12px;
+  border-radius: 20%;
+  padding: 8px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.logo {
+  height: 32px;
+  margin: 0 12px;
+}
+.app-name {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.title {
+  font-weight: 600;
+}
+.subtitle {
   font-size: 12px;
-  color: #777;
-  margin-left: -50px;
+  color: #666;
+}
+
+/* CENTER */
+.center-section {
+  flex: 1;
+  text-align: center;
+}
+.greeting {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* RIGHT */
+.right-section {
+  display: flex;
+  align-items: center;
+}
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  background: #eeeeee;
+  border-radius: 4px;
+  padding: 4px 8px;
+  height: 32px;
+  margin-right: 16px;
+}
+.search-wrapper .material-icons {
+  font-size: 20px;
+  color: #888;
+}
+.search-wrapper input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 150px;
+  margin: 0 4px;
+}
+.shortcut {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.user-menu {
+  position: relative;
+}
+.avatar {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.user-menu .dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.user-menu:hover .dropdown {
+  display: block;
+}
+.user-menu .dropdown button {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+.user-menu .dropdown button:hover {
+  background: #f0f0f0;
 }

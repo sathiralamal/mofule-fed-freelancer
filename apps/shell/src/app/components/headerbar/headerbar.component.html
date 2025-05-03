@@ -1,7 +1,35 @@
-<div class="search-bar">
-  <mat-form-field appearance="outline" class="search-input">
-    <mat-icon matPrefix>search</mat-icon>
-    <input matInput placeholder="Search" />
-    <mat-icon matSuffix>keyboard_command_key</mat-icon>
-  </mat-form-field>
-</div>
+<header class="header-toolbar">
+  <div class="left-section">
+    <button class="icon-btn-left">
+      <span class="material-symbols-outlined"> dock_to_right </span>
+    </button>
+    <span class="greeting"
+      ><h4>Hello, {{ userName | titlecase }} 👋</h4></span
+    >
+  </div>
+
+  <div class="right-section">
+    <div class="search-wrapper">
+      <span class="material-icons">search</span>
+      <input type="text" placeholder="Search" />
+      <span class="shortcut">⌘K</span>
+    </div>
+
+    <button class="icon-btn">
+      <span class="material-icons">notifications</span>
+    </button>
+
+    <button class="icon-btn">
+      <span class="material-icons">brightness_6</span>
+    </button>
+
+    <div class="user-menu">
+      <img src="{{ userPicture }}" alt="User" class="avatar" />
+      <div class="dropdown">
+        <button>Logout</button>
+        <button>Settings</button>
+        <button>Help Center</button>
+      </div>
+    </div>
+  </div>
+</header>
